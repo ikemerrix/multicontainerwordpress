@@ -9,10 +9,13 @@ trigger:
 parameters:
   - name: resourceGroupName
     type: string
+    default: 'sometest1'
   - name: appServicePlanName
     type: string 
+    default: 'sometest1'
   - name: appServiceName
     type: string 
+    default: 'sometest1'
 pool:
   vmImage: ubuntu-latest
 
