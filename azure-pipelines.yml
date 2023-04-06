@@ -30,7 +30,7 @@ steps:
     azureSubscription: 'FV Cert 1(23759a32-8981-4ac4-85d0-29259820d0aa)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az webapp create --resource-group ${{parameters.resourceGroupName}} &&
+    inlineScript: 'az group create --name ${{parameters.resourceGroupName}} --location "West US" &&
     az appservice plan create --name ${{parameters.appServicePlanName}} --resource-group ${{parameters.resourceGroupName}} --sku S1 --is-linux' 
 - task: AzureCLI@2
   inputs:
