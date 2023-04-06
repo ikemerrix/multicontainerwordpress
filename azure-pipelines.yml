@@ -37,4 +37,4 @@ steps:
     azureSubscription: 'FV Cert 1(23759a32-8981-4ac4-85d0-29259820d0aa)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az webapp create --resource-group ${{parameters.resourceGroupName}} --plan ${{parameters.appServicePlanName}} --name ${{parameters.appServiceName}} --multicontainer-config-type compose --multicontainer-config-file compose-wordpress.yml'
+    inlineScript: 'az webapp create --resource-group ${{parameters.resourceGroupName}} --plan ${{parameters.appServicePlanName}} --name ${{parameters.appServiceName}} --multicontainer-config-type compose --multicontainer-config-file docker-compose.yaml'
